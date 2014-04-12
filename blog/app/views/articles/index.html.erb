@@ -1,0 +1,28 @@
+<%= render :partial => "shared/navbar" %>
+<div class="container hasPadding">
+	<div class="page-header">
+		<div class="row">
+			<div class="col-lg-12 text-center">
+				<h1>All Articles</h1>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-lg-10 col-lg-offset-1">
+			<table class="table table-stiped table-hover">
+				<tr>
+					<th>#</th>
+					<th>Title</th>
+					<th>Text</th>
+				</tr>
+				<% @articles.each do |a| %>
+				<tr>
+					<td><%= a.id %></td>
+					<td><%= a.title %></td>
+					<td><%= a.text %></td>
+				</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>

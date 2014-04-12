@@ -2,6 +2,10 @@ class ArticlesController < ApplicationController
   def new
   end
   
+  def index
+    @articles = Article.all()
+  end
+  
   def create
     #render plain: params[:article].inspect
     @article = Article.new(article_params)
